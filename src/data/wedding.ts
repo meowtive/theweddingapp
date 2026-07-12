@@ -1,7 +1,7 @@
 export const wedding = {
-  groom: "Filipi",
+  groom: "Rafael",
   bride: "Sara",
-  names: "Filipi & Sara",
+  names: "Rafael & Sara",
   tagline:
     "Diante da vastidão do tempo e da imensidão do universo, é um imenso prazer para mim dividir um planeta e uma época com você",
   dateLabel: "13. 12. 2026.",
@@ -30,38 +30,38 @@ export const wedding = {
   },
   heroImages: [
     {
-      src: "/images/hero/filipi-sara-running.jpg",
+      src: "/images/hero/rafael-sara-running.jpg",
       objectPosition: "center top",
     },
     {
-      src: "/images/hero/filipi-sara-embrace.jpg",
+      src: "/images/hero/rafael-sara-embrace.jpg",
       objectPosition: "center 28%",
     },
     {
-      src: "/images/hero/filipi-sara-lift.jpg",
+      src: "/images/hero/rafael-sara-lift.jpg",
       objectPosition: "center 32%",
     },
   ],
   aboutImages: [
     {
       src: "/images/about/pre-wedding-forehead-kiss.jpg",
-      alt: "Filipi e Sara no ensaio pré-wedding",
-      caption: "Filipi & Sara",
+      alt: "Rafael e Sara no ensaio pré-wedding",
+      caption: "Rafael & Sara",
     },
     {
       src: "/images/about/pre-wedding-lift.jpg",
-      alt: "Filipi e Sara no ensaio pré-wedding",
-      caption: "Filipi & Sara",
+      alt: "Rafael e Sara no ensaio pré-wedding",
+      caption: "Rafael & Sara",
     },
     {
       src: "/images/about/pre-wedding-indoor.jpg",
-      alt: "Filipi e Sara no ensaio pré-wedding",
-      caption: "Filipi & Sara",
+      alt: "Rafael e Sara no ensaio pré-wedding",
+      caption: "Rafael & Sara",
     },
     {
       src: "/images/about/pre-wedding-stairs.jpg",
-      alt: "Filipi e Sara no ensaio pré-wedding",
-      caption: "Filipi & Sara",
+      alt: "Rafael e Sara no ensaio pré-wedding",
+      caption: "Rafael & Sara",
     },
   ],
   venueImages: [

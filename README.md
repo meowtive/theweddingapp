@@ -1,4 +1,4 @@
-# Filipi & Sara — Wedding Site
+# Rafael & Sara — Wedding Site
 
 Site de casamento em Next.js (App Router) + Tailwind CSS, em pt-BR.
 

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 export function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const unlockedRef = useRef(false);
   const [playing, setPlaying] = useState(false);
   const [needsGesture, setNeedsGesture] = useState(false);
 
@@ -13,34 +14,65 @@ export function MusicPlayer() {
 
     audio.loop = true;
     audio.volume = 0.45;
+    audio.setAttribute("playsinline", "true");
 
-    const tryPlay = async () => {
+    const start = async () => {
+      if (unlockedRef.current) return;
       try {
         await audio.play();
+        unlockedRef.current = true;
         setPlaying(true);
         setNeedsGesture(false);
+        return true;
       } catch {
         setNeedsGesture(true);
         setPlaying(false);
+        return false;
       }
     };
 
-    void tryPlay();
+    void start();
+
+    const unlock = () => {
+      void start().then((ok) => {
+        if (ok) {
+          window.removeEventListener("pointerdown", unlock);
+          window.removeEventListener("touchstart", unlock);
+          window.removeEventListener("keydown", unlock);
+        }
+      });
+    };
+
+    window.addEventListener("pointerdown", unlock, { passive: true });
+    window.addEventListener("touchstart", unlock, { passive: true });
+    window.addEventListener("keydown", unlock);
+
+    const onPlay = () => setPlaying(true);
+    const onPause = () => setPlaying(false);
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+
+    return () => {
+      window.removeEventListener("pointerdown", unlock);
+      window.removeEventListener("touchstart", unlock);
+      window.removeEventListener("keydown", unlock);
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+    };
   }, []);
 
   async function togglePlay() {
     const audio = audioRef.current;
     if (!audio) return;
 
-    if (playing) {
+    if (!audio.paused) {
       audio.pause();
-      setPlaying(false);
       return;
     }
 
     try {
       await audio.play();
-      setPlaying(true);
+      unlockedRef.current = true;
       setNeedsGesture(false);
     } catch {
       setNeedsGesture(true);
@@ -49,8 +81,20 @@ export function MusicPlayer() {
 
   return (
     <div className="fixed bottom-5 right-5 z-50">
-      <audio ref={audioRef} src="/theme.mp3" preload="auto" playsInline />
-      <div className="flex items-center gap-2 rounded-full border border-line bg-paper/95 px-3 py-2 shadow-[0_12px_40px_rgba(44,36,31,0.12)] backdrop-blur">
+      <audio
+        ref={audioRef}
+        src="/theme.mp3"
+        preload="auto"
+        playsInline
+        loop
+      />
+      <div
+        className={`flex items-center gap-2 rounded-full border bg-paper/95 px-3 py-2 shadow-[0_12px_40px_rgba(44,36,31,0.12)] backdrop-blur transition ${
+          needsGesture && !playing
+            ? "border-accent animate-pulse"
+            : "border-line"
+        }`}
+      >
         <button
           type="button"
           onClick={togglePlay}
@@ -69,7 +113,7 @@ export function MusicPlayer() {
         </button>
         <div className="pr-2">
           <p className="text-[10px] tracking-[0.18em] uppercase text-muted">
-            {needsGesture ? "Toque para ouvir" : "Tribalistas"}
+            {needsGesture && !playing ? "Toque para ouvir" : "Tribalistas"}
           </p>
           <p className="font-serif text-sm text-ink">Aliança</p>
         </div>
