@@ -8,7 +8,6 @@ import { BlurFade } from "@/components/ui/blur-fade";
 export function About() {
   const [index, setIndex] = useState(0);
   const photos = wedding.aboutImages;
-  const current = photos[index];
 
   useEffect(() => {
     const id = window.setInterval(() => {
@@ -62,18 +61,38 @@ export function About() {
           <div className="relative mx-auto max-w-md">
             <div className="photo-frame rotate-1">
               <div className="relative aspect-[3/4] overflow-hidden">
-                <Image
-                  src={current.src}
-                  alt={current.alt}
-                  fill
-                  sizes="(max-width: 768px) 90vw, 420px"
-                  className="object-cover transition-opacity duration-500"
-                  priority={false}
-                />
+                {photos.map((photo, photoIndex) => (
+                  <div
+                    key={photo.src}
+                    className={`absolute inset-0 transition-opacity duration-[1600ms] ease-out ${
+                      photoIndex === index ? "opacity-100" : "opacity-0"
+                    }`}
+                    aria-hidden={photoIndex !== index}
+                  >
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      sizes="(max-width: 768px) 90vw, 420px"
+                      className="object-cover"
+                      priority={photoIndex === 0}
+                    />
+                  </div>
+                ))}
               </div>
-              <p className="mt-3 text-center font-script text-2xl text-accent">
-                {current.caption}
-              </p>
+              <div className="relative mt-3 h-10">
+                {photos.map((photo, photoIndex) => (
+                  <p
+                    key={photo.src}
+                    className={`absolute inset-x-0 text-center font-script text-2xl text-accent transition-opacity duration-[1600ms] ease-out ${
+                      photoIndex === index ? "opacity-100" : "opacity-0"
+                    }`}
+                    aria-hidden={photoIndex !== index}
+                  >
+                    {photo.caption}
+                  </p>
+                ))}
+              </div>
             </div>
 
             <div className="mt-8 flex items-center justify-end gap-4 text-accent">

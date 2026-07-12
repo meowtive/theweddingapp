@@ -24,7 +24,8 @@ export const wedding = {
     title: "Um capítulo escrito a quatro mãos",
     body: [
       "O que começou com conversas leves virou certeza. Entre risadas, viagens e o cotidiano, escolhemos construir uma vida juntos — com carinho, paciência e muito amor.",
-      "No dia 13 de dezembro de 2026, celebramos esse compromisso cercados das pessoas que fazem parte da nossa história. Sua presença é o nosso maior presente.",
+      "Acreditamos que foi Jesus quem uniu nossos caminhos e continua sendo o centro da nossa história. É Nele que firmamos este compromisso de caminhar lado a lado.",
+      "No dia 13 de dezembro de 2026, celebramos esse sim cercados das pessoas que fazem parte da nossa história. Sua presença é o nosso maior presente.",
     ],
     signature: "Com amor,",
   },
