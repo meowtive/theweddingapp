@@ -20,7 +20,7 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative isolate min-h-[100svh] overflow-hidden bg-sand"
+      className="relative min-h-[100svh] overflow-hidden bg-sand"
     >
       {wedding.heroImages.map((image, index) => (
         <div
@@ -44,17 +44,17 @@ export function Hero() {
       ))}
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-5xl flex-col items-center px-6 pb-16 pt-10 text-center">
-        <BlurFade delay={0.05} className="mb-8">
+        <BlurFade delay={0.05} className="relative z-50 mb-8">
           <p className="font-script text-4xl text-accent-soft md:text-5xl">
             {wedding.names}
           </p>
         </BlurFade>
 
-        <BlurFade delay={0.15}>
+        <BlurFade delay={0.15} className="relative z-50">
           <SiteNav />
         </BlurFade>
 
-        <div className="mt-auto mb-auto flex flex-col items-center gap-6 py-16">
+        <div className="relative z-0 mt-auto mb-auto flex flex-col items-center gap-6 py-16">
           <BlurFade delay={0.25}>
             <h1 className="max-w-3xl font-serif text-2xl leading-snug text-ink sm:text-3xl md:text-4xl md:leading-snug">
               {wedding.tagline}

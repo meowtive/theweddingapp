@@ -4,324 +4,494 @@ export type Gift = {
   description: string;
   priceInCents: number;
   image: string;
-  /** Flip to true + redeploy after someone pays via Abacate */
+  /** Retailer product page — optional card checkout via store */
+  productUrl?: string;
+  /** Flip to true + redeploy after someone presents */
   presented: boolean;
 };
 
+/**
+ * Vales + experiências Chile/Santiago + lista da casa (Sara).
+ * PIX: wedding.pix — productUrl opens the store for card payment when available.
+ */
 export const gifts: Gift[] = [
+  // —— Vales ——
   {
-    id: "lua-de-mel-paris",
-    name: "Contribuição lua de mel — Paris",
-    description: "Ajude no nosso primeiro café com vista para a Torre Eiffel.",
-    priceInCents: 50000,
-    image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80",
+    id: "voucher-150",
+    name: "Vale-presente R$ 150",
+    description: "Uma contribuição livre para o que precisarmos na nova casa.",
+    priceInCents: 15000,
+    image: "/images/gifts/voucher-150.jpg",
     presented: false,
   },
   {
-    id: "jantar-romantico",
-    name: "Jantar romântico",
-    description: "Uma noite especial a dois depois do grande dia.",
+    id: "voucher-200",
+    name: "Vale-presente R$ 200",
+    description: "Um presente flexível — usamos onde fizer mais sentido.",
+    priceInCents: 20000,
+    image: "/images/gifts/voucher-200.jpg",
+    presented: false,
+  },
+  {
+    id: "voucher-300",
+    name: "Vale-presente R$ 300",
+    description: "Ajude a montar o lar — valor livre para nossos planos.",
+    priceInCents: 30000,
+    image: "/images/gifts/voucher-300.jpg",
+    presented: false,
+  },
+
+  // —— Lua de mel Chile / Santiago ——
+  {
+    id: "jantar-santiago",
+    name: "Jantar romântico em Santiago",
+    description:
+      "Uma noite especial a dois — Lastarria, Bellavista ou Providencia.",
     priceInCents: 35000,
     image:
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80",
     presented: false,
   },
   {
-    id: "noite-hotel",
-    name: "Noite de hotel",
-    description: "Um descanso merecido após a festa.",
+    id: "noite-hotel-santiago",
+    name: "Upgrade de hotel em Santiago",
+    description: "Um toque a mais de conforto depois dos passeios.",
     priceInCents: 45000,
     image:
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=80",
     presented: false,
   },
   {
-    id: "passeio-barco",
-    name: "Passeio de barco",
-    description: "Um momento a dois com brisa e paisagem.",
-    priceInCents: 28000,
+    id: "vinicola-maipo",
+    name: "Tour em vinícola — Vale do Maipo",
+    description: "Degustação de Carménère e Cabernet com vista para os Andes.",
+    priceInCents: 40000,
     image:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80",
     presented: false,
   },
   {
-    id: "spa-casal",
-    name: "Dia de spa a dois",
-    description: "Massagem e relaxamento para começar bem a vida a dois.",
+    id: "cajon-del-maipo",
+    name: "Passeio no Cajón del Maipo",
+    description: "Cordilheira, ar puro e paisagem de tirar o fôlego.",
+    priceInCents: 32000,
+    image:
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80",
+    presented: false,
+  },
+  {
+    id: "san-cristobal",
+    name: "Teleférico San Cristóbal",
+    description: "Vista panorâmica de Santiago do Cerro San Cristóbal.",
+    priceInCents: 18000,
+    image:
+      "https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=900&q=80",
+    presented: false,
+  },
+  {
+    id: "valparaiso",
+    name: "Dia em Valparaíso",
+    description: "Cores, mirantes e brisa do Pacífico — bate-volta a dois.",
+    priceInCents: 38000,
+    image:
+      "https://images.unsplash.com/photo-1531968455001-5c5272a41129?auto=format&fit=crop&w=900&q=80",
+    presented: false,
+  },
+  {
+    id: "spa-termas-chile",
+    name: "Dia de spa / termas",
+    description: "Relaxamento a dois para começar bem a vida casada.",
     priceInCents: 40000,
     image:
       "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80",
     presented: false,
   },
   {
-    id: "airfryer",
-    name: "Air fryer",
-    description: "Para receitas práticas no dia a dia.",
-    priceInCents: 45000,
-    image:
-      "https://images.unsplash.com/photo-1585515320310-259814833e87?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "cafeteira",
-    name: "Cafeteira espresso",
-    description: "Nossos cafés da manhã com muito mais aroma.",
-    priceInCents: 120000,
+    id: "cafe-santiago",
+    name: "Café com vista em Santiago",
+    description: "Nosso primeiro café chileno com vista para a cidade.",
+    priceInCents: 12000,
     image:
       "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
     presented: false,
   },
   {
-    id: "jogo-panelas",
-    name: "Jogo de panelas",
-    description: "Para cozinhar juntos com tranquilidade.",
-    priceInCents: 55000,
-    image:
-      "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "kit-facas",
-    name: "Kit de facas profissionais",
-    description: "Corte preciso para as receitas favoritas.",
-    priceInCents: 32000,
-    image:
-      "https://images.unsplash.com/photo-1593618998160-e34014e67546?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "liquidificador",
-    name: "Liquidificador",
-    description: "Sucos, vitaminas e molhos em segundos.",
-    priceInCents: 28000,
-    image:
-      "https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "mixer",
-    name: "Mixer / batedeira",
-    description: "Para massas, cremes e sobremesas.",
-    priceInCents: 25000,
-    image:
-      "https://images.unsplash.com/photo-1585515320310-259814833e87?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "jogo-toalhas",
-    name: "Jogo de toalhas",
-    description: "Conforto macio no banheiro do novo lar.",
+    id: "mercado-central",
+    name: "Almoço no Mercado Central",
+    description: "Mariscos e sabor local no coração de Santiago.",
     priceInCents: 22000,
     image:
-      "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80",
     presented: false,
   },
   {
-    id: "jogo-lençois",
-    name: "Jogo de lençóis",
-    description: "Noites mais aconchegantes.",
-    priceInCents: 30000,
-    image:
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "edredom",
-    name: "Edredom king",
-    description: "Aconchego para o nosso quarto.",
-    priceInCents: 38000,
-    image:
-      "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "travesseiros",
-    name: "Par de travesseiros",
-    description: "Sono reparador todos os dias.",
-    priceInCents: 18000,
-    image:
-      "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "jogo-jantar",
-    name: "Aparelho de jantar",
-    description: "Para receber família e amigos com elegância.",
-    priceInCents: 48000,
-    image:
-      "https://images.unsplash.com/photo-1578500351865-d6c8c0d0f657?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "taças-vinho",
-    name: "Jogo de taças de vinho",
-    description: "Brindes especiais em casa.",
-    priceInCents: 20000,
-    image:
-      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "jogo-talheres",
-    name: "Faqueiro completo",
-    description: "Mesa posta com tudo no lugar.",
-    priceInCents: 35000,
-    image:
-      "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "aspirador",
-    name: "Aspirador de pó",
-    description: "Casa limpa com menos esforço.",
-    priceInCents: 65000,
-    image:
-      "https://images.unsplash.com/photo-1558317374-067fb5f40135?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "ferro-passar",
-    name: "Ferro a vapor",
-    description: "Roupas impecáveis no dia a dia.",
-    priceInCents: 22000,
-    image:
-      "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "ventilador",
-    name: "Ventilador de torre",
-    description: "Conforto térmico nos dias quentes.",
+    id: "passeio-barco-chile",
+    name: "Passeio de barco no Pacífico",
+    description: "Um momento a dois com brisa e oceano chileno.",
     priceInCents: 28000,
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80",
     presented: false,
   },
   {
-    id: "umidificador",
-    name: "Umidificador de ar",
-    description: "Ambiente mais agradável para dormir.",
-    priceInCents: 20000,
-    image:
-      "https://images.unsplash.com/photo-1585771724680-ef6c4c48baaa?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "kit-jardim",
-    name: "Kit jardinagem",
-    description: "Plantas e vida na varanda.",
-    priceInCents: 15000,
-    image:
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "quadro-decorativo",
-    name: "Quadro decorativo",
-    description: "Arte para personalizar a sala.",
-    priceInCents: 25000,
-    image:
-      "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "luminaria",
-    name: "Luminária de mesa",
-    description: "Luz aconchegante para leituras.",
-    priceInCents: 18000,
-    image:
-      "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "jogo-copos",
-    name: "Jogo de copos",
-    description: "Do dia a dia aos brindes especiais.",
-    priceInCents: 12000,
-    image:
-      "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "forma-bolo",
-    name: "Kit formas e assadeiras",
-    description: "Para bolos, lasanhas e forno cheio.",
-    priceInCents: 16000,
-    image:
-      "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "churrasqueira",
-    name: "Kit churrasco",
-    description: "Domingos em família com sabor.",
-    priceInCents: 42000,
-    image:
-      "https://images.unsplash.com/photo-1555939596-1928bb21d1d1?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "vinhos",
-    name: "Seleção de vinhos",
-    description: "Para celebrar datas especiais em casa.",
-    priceInCents: 30000,
-    image:
-      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "experiencia-culinaria",
-    name: "Aula de culinária a dois",
-    description: "Aprender uma receita nova juntos.",
-    priceInCents: 35000,
-    image:
-      "https://images.unsplash.com/photo-1556911220-bff31c875d1c?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "fotografia",
-    name: "Ensaio pós-casamento",
-    description: "Registrar o início da vida a dois.",
-    priceInCents: 80000,
-    image:
-      "https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
-    id: "contribuicao-viagem",
-    name: "Contribuição viagem — livre",
-    description: "Qualquer valor que ajude na nossa aventura.",
+    id: "contribuicao-chile",
+    name: "Contribuição Chile — livre",
+    description: "Qualquer valor que ajude nas experiências da lua de mel.",
     priceInCents: 10000,
     image:
       "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=900&q=80",
     presented: false,
   },
+
+  // —— Casa (Sara) ——
   {
-    id: "caixa-memórias",
-    name: "Caixa de memórias",
-    description: "Para guardar cartas, fotos e lembranças.",
-    priceInCents: 15000,
-    image:
-      "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=900&q=80",
+    id: "jogo-panelas-ceramica",
+    name: "Jogo de panelas cerâmica",
+    description: "Jogo 6 peças com revestimento cerâmico — cores claras.",
+    priceInCents: 58812,
+    image: "/images/gifts/jogo-panelas-ceramica.jpg",
     presented: false,
   },
   {
-    id: "kit-café-da-manha",
-    name: "Kit café da manhã",
-    description: "Café especial, geleias e momentos calmos.",
-    priceInCents: 18000,
-    image:
-      "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
+    id: "frigideiras",
+    name: "Frigideiras (pequena e grande)",
+    description: "Kit Tramontina Paris — 2 frigideiras antiaderentes.",
+    priceInCents: 8999,
+    image: "/images/gifts/frigideiras.jpg",
     presented: false,
   },
   {
-    id: "smart-speaker",
-    name: "Caixa de som",
-    description: "Trilha sonora para o nosso lar.",
-    priceInCents: 55000,
-    image:
-      "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=900&q=80",
+    id: "panela-pressao",
+    name: "Panela de pressão",
+    description: "Panela de pressão 4,5L antiaderente.",
+    priceInCents: 17999,
+    image: "/images/gifts/panela-pressao.jpg",
+    presented: false,
+  },
+  {
+    id: "assadeiras-vidro",
+    name: "Assadeiras de vidro",
+    description: "Conjunto de assadeiras de vidro para forno e mesa.",
+    priceInCents: 25100,
+    image: "/images/gifts/assadeiras-vidro.jpg",
+    presented: false,
+  },
+  {
+    id: "formas-bolo",
+    name: "Formas para bolo",
+    description: "Kit de formas antiaderentes para bolos e sobremesas.",
+    priceInCents: 14300,
+    image: "/images/gifts/formas-bolo.jpg",
+    presented: false,
+  },
+  {
+    id: "jogo-facas",
+    name: "Jogo de facas",
+    description: "Kit de facas Tramontina para o dia a dia.",
+    priceInCents: 19300,
+    image: "/images/gifts/jogo-facas.jpg",
+    presented: false,
+  },
+  {
+    id: "potes-hermeticos",
+    name: "Potes herméticos",
+    description: "Jogo de potes de vidro com tampa de bambu — 4 peças.",
+    priceInCents: 10990,
+    image: "/images/gifts/potes-hermeticos.jpg",
+    productUrl:
+      "https://www.mercadolivre.com.br/eps-709-13-potes-vidro-mantimentos-hermeticos-com-tampa-bambu-alta-resistncia-epsilon/p/MLB44648973",
+    presented: false,
+  },
+  {
+    id: "aparelho-jantar",
+    name: "Aparelho de jantar",
+    description: "Tramontina Leonora em porcelana — 20 peças.",
+    priceInCents: 41515,
+    image: "/images/gifts/aparelho-jantar.jpg",
+    productUrl:
+      "https://www.tramontina.com.br/aparelho-de-jantar-tramontina-leonora-em-porcelana-20-pecas/96010289.html",
+    presented: false,
+  },
+  {
+    id: "faqueiro",
+    name: "Faqueiro",
+    description: "Tramontina Búzios — aço inox, 24 peças.",
+    priceInCents: 13500,
+    image: "/images/gifts/faqueiro.jpg",
+    productUrl:
+      "https://www.mercadolivre.com.br/jogo-talheres-faqueiro-buzios-aco-inox-24-pecas-tramontina/p/MLB35092029",
+    presented: false,
+  },
+  {
+    id: "jogo-copos",
+    name: "Jogo de copos",
+    description: "Jogo de copos canelados ~430ml — 6 peças.",
+    priceInCents: 4799,
+    image: "/images/gifts/jogo-copos.jpg",
+    productUrl:
+      "https://www.mercadolivre.com.br/jogo-de-copos-420ml-elegante-resistente-canelado-pratico/p/MLB34215455",
+    presented: false,
+  },
+  {
+    id: "travessas",
+    name: "Travessas",
+    description: "Kit Tramontina Cosmos para assar e servir — 4 peças.",
+    priceInCents: 45125,
+    image: "/images/gifts/travessas.jpg",
+    productUrl:
+      "https://www.tramontina.com.br/kit-para-assar-e-servir-tramontina-cosmos-em-aco-inox-com-acabamento-fosco-e-tampa-de-vidro-4-pecas/64310150.html",
+    presented: false,
+  },
+  {
+    id: "air-fryer",
+    name: "Air fryer",
+    description: "Britânia BFR38 — fritadeira elétrica 4,2L.",
+    priceInCents: 21990,
+    image: "/images/gifts/air-fryer.jpg",
+    productUrl:
+      "https://www.britania.com.br/fritadeira-air-fryer-bfr38-127v-063801097/p?idsku=22503",
+    presented: false,
+  },
+  {
+    id: "liquidificador-arno",
+    name: "Liquidificador",
+    description: "Arno Power Max 2200 marfim LN64 — cores claras.",
+    priceInCents: 24999,
+    image: "/images/gifts/liquidificador-arno.jpg",
+    productUrl:
+      "https://www.magazineluiza.com.br/liquidificador-arno-power-max-2200-marfim-ln64/p/241081900/ep/liqu/",
+    presented: false,
+  },
+  {
+    id: "cafeteira",
+    name: "Cafeteira",
+    description: "Cafeteira Britânia CP15 — café fresquinho no dia a dia.",
+    priceInCents: 10990,
+    image: "/images/gifts/cafeteira.jpg",
+    presented: false,
+  },
+  {
+    id: "sanduicheira",
+    name: "Sanduicheira",
+    description: "Britânia BGR16 Redstone — cores claras.",
+    priceInCents: 18990,
+    image: "/images/gifts/sanduicheira.jpg",
+    productUrl:
+      "https://www.amazon.com.br/Sanduicheira-Grill-Brit%C3%A2nia-BGR16-Redstone/dp/B0CJ3R1537",
+    presented: false,
+  },
+  {
+    id: "torradeira-electrolux",
+    name: "Torradeira",
+    description: "Electrolux ETS25 — 7 níveis de tostagem.",
+    priceInCents: 19990,
+    image: "/images/gifts/torradeira-electrolux.jpg",
+    productUrl:
+      "https://www.amazon.com.br/Electrolux-4310AOBR407-Torradeira-ETS25/dp/B09CBWDVH4",
+    presented: false,
+  },
+  {
+    id: "mixer-philips",
+    name: "Mixer",
+    description: "Philips Walita RI2622 branco — cores claras.",
+    priceInCents: 20990,
+    image: "/images/gifts/mixer-philips.jpg",
+    productUrl:
+      "https://www.amazon.com.br/Mixer-Philips-RI2622-32-branco/dp/B0873XXMXZ",
+    presented: false,
+  },
+  {
+    id: "processador-mondial",
+    name: "Processador de alimentos",
+    description: "Mondial Multiprocessador Turbo 1000W branco.",
+    priceInCents: 34990,
+    image: "/images/gifts/processador-mondial.jpg",
+    productUrl:
+      "https://www.amazon.com.br/MONDIAL-Multiprocessador-Turbo-Branco-1000W/dp/B0GPZTFPY3",
+    presented: false,
+  },
+  {
+    id: "chaleira-britania",
+    name: "Chaleira elétrica",
+    description: "Britânia 2,1L de vidro com LED — cores claras.",
+    priceInCents: 19990,
+    image: "/images/gifts/chaleira-britania.jpg",
+    productUrl:
+      "https://www.mercadolivre.com.br/britnia-bch20c-chaleira-eletrica-2l-branco/p/MLB69728049",
+    presented: false,
+  },
+  {
+    id: "panificadora-britania",
+    name: "Panificadora",
+    description: "Britânia Multipane — 12 programas.",
+    priceInCents: 51990,
+    image: "/images/gifts/panificadora-britania.jpg",
+    productUrl:
+      "https://www.magazineluiza.com.br/panificadora-britania-multipane-branca-12-programas/p/023305000/ep/pani/",
+    presented: false,
+  },
+  {
+    id: "jogo-cama-king",
+    name: "Jogo de cama king",
+    description: "Jogo de cama percal — conforto para o quarto.",
+    priceInCents: 29750,
+    image: "/images/gifts/jogo-cama-king.jpg",
+    productUrl:
+      "https://www.zelo.com.br/jogo-de-cama-alexandre-herchcovitch-queen-percal-180-fios-100-algodao-p985250",
+    presented: false,
+  },
+  {
+    id: "edredom-king",
+    name: "Edredom king",
+    description: "Edredom tamanho king / casal.",
+    priceInCents: 16999,
+    image: "/images/gifts/edredom-king.jpg",
+    presented: false,
+  },
+  {
+    id: "cobertores-king",
+    name: "Cobertores king",
+    description: "Coberdrom / cobertor tamanho king.",
+    priceInCents: 19990,
+    image: "/images/gifts/cobertores-king.jpg",
+    presented: false,
+  },
+  {
+    id: "travesseiros",
+    name: "Travesseiros",
+    description: "Par de travesseiros de fibra siliconizada.",
+    priceInCents: 8390,
+    image: "/images/gifts/travesseiros.jpg",
+    presented: false,
+  },
+  {
+    id: "almofadas",
+    name: "Almofadas",
+    description: "Kit de almofadas decorativas para a sala.",
+    priceInCents: 12990,
+    image: "/images/gifts/almofadas.jpg",
+    presented: false,
+  },
+  {
+    id: "protetor-colchao",
+    name: "Protetor de colchão",
+    description: "Protetor impermeável king — Ortobom.",
+    priceInCents: 15391,
+    image: "/images/gifts/protetor-colchao.jpg",
+    presented: false,
+  },
+  {
+    id: "geladeira-brastemp",
+    name: "Geladeira",
+    description: "Brastemp Frost Free French Door 3 portas branca BRO85MB.",
+    priceInCents: 559900,
+    image: "/images/gifts/geladeira-brastemp.jpg",
+    productUrl:
+      "https://www.brastemp.com.br/geladeira-frost-free-french-door-3-portas-branca-brastemp-bro85mb/p?idsku=326196066",
+    presented: false,
+  },
+  {
+    id: "fogao-cooktop",
+    name: "Fogão / cooktop",
+    description: "Electrolux Efficient 5 bocas — mesa de vidro (KE5GR).",
+    priceInCents: 68900,
+    image: "/images/gifts/fogao-cooktop.jpg",
+    productUrl:
+      "https://loja.electrolux.com.br/cooktop-5-bocas-electrolux-gas-efficient-mesa-de-vidro-e-grade-de-aco-fosco--ke5gr-/p?idsku=310128208",
+    presented: false,
+  },
+  {
+    id: "maquina-lavar",
+    name: "Máquina de lavar",
+    description: "Electrolux 12kg com cesto inox (LAC12).",
+    priceInCents: 209900,
+    image: "/images/gifts/maquina-lavar.jpg",
+    presented: false,
+  },
+  {
+    id: "microondas-brastemp",
+    name: "Micro-ondas",
+    description: "Brastemp 32L branco com menu gourmet (BMS46AB).",
+    priceInCents: 75900,
+    image: "/images/gifts/microondas-brastemp.jpg",
+    presented: false,
+  },
+  {
+    id: "lava-seca-electrolux",
+    name: "Lava e seca",
+    description: "Electrolux LSC12 12kg Inverter cinza ônix.",
+    priceInCents: 419900,
+    image: "/images/gifts/lava-seca-electrolux.jpg",
+    productUrl:
+      "https://www.magazineluiza.com.br/lava-e-seca-electrolux-12kg-lsc12-inverter-agua-fria-e-quente-cinza-onix/p/241187000/ed/ela1/",
+    presented: false,
+  },
+  {
+    id: "forno-britania",
+    name: "Forno elétrico",
+    description: "Britânia BFE55P 52L — dupla resistência.",
+    priceInCents: 39990,
+    image: "/images/gifts/forno-britania.jpg",
+    productUrl:
+      "https://www.mercadolivre.com.br/forno-eletrico-britnia-52l-dupla-resistncia-bfe55p/p/MLB29117695",
+    presented: false,
+  },
+  {
+    id: "purificador-electrolux",
+    name: "Purificador de água",
+    description: "Electrolux PE11B — painel touch, branco.",
+    priceInCents: 49990,
+    image: "/images/gifts/purificador-electrolux.jpg",
+    productUrl:
+      "https://www.casasbahia.com.br/purificador-de-agua-electrolux-pe11b-com-painel-touch-bivolt-branco/p/11688765",
+    presented: false,
+  },
+  {
+    id: "smart-tv",
+    name: "Smart TV",
+    description: "Smart TV Samsung 55\" Crystal UHD 4K.",
+    priceInCents: 299900,
+    image: "/images/gifts/smart-tv.jpg",
+    presented: false,
+  },
+  {
+    id: "sofa",
+    name: "Sofá",
+    description: "Sofá 3 lugares — referência Tok&Stok.",
+    priceInCents: 169900,
+    image: "/images/gifts/sofa.jpg",
+    presented: false,
+  },
+  {
+    id: "colchao",
+    name: "Colchão",
+    description: "Colchão king Ortobom Light D45.",
+    priceInCents: 272999,
+    image: "/images/gifts/colchao.jpg",
+    presented: false,
+  },
+  {
+    id: "guarda-roupa",
+    name: "Guarda-roupa",
+    description: "Guarda-roupa casal 3 portas.",
+    priceInCents: 133331,
+    image: "/images/gifts/guarda-roupa.jpg",
+    presented: false,
+  },
+  {
+    id: "rack",
+    name: "Rack",
+    description: "Rack para TV até 65\" — ~180 cm.",
+    priceInCents: 57776,
+    image: "/images/gifts/rack.jpg",
+    presented: false,
+  },
+  {
+    id: "mesa-jantar",
+    name: "Mesa de jantar",
+    description: "Mesa de jantar 6 lugares em madeira.",
+    priceInCents: 166664,
+    image: "/images/gifts/mesa-jantar.jpg",
     presented: false,
   },
 ];

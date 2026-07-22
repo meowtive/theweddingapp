@@ -77,4 +77,10 @@ export const wedding = {
     { href: "#presentes", label: "Presentes" },
     { href: "#local", label: "Local" },
   ],
+  pix: {
+    /** Exact key to copy into bank apps */
+    key: "11941601956",
+    typeLabel: "Telefone",
+    displayLabel: "(11) 94160-1956",
+  },
 } as const;

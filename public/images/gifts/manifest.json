@@ -1,0 +1,197 @@
+{
+  "jogo-panelas-ceramica": {
+    "localImage": "/images/gifts/jogo-panelas-ceramica.jpg",
+    "price": 188500,
+    "source": "https://assets.tramontina.com.br/upload/tramon/imagens/FAR/65120026PDM001E.jpg"
+  },
+  "frigideiras": {
+    "localImage": "/images/gifts/frigideiras.jpg",
+    "price": 18900,
+    "source": "https://assets.tramontina.com.br/upload/tramon/imagens/CUT/20850020PDM001E.jpg"
+  },
+  "panela-pressao": {
+    "localImage": "/images/gifts/panela-pressao.jpg",
+    "price": 174800,
+    "source": "https://assets.tramontina.com.br/upload/tramon/imagens/FAR/62416200PDM001E.jpg"
+  },
+  "assadeiras-vidro": {
+    "localImage": "/images/gifts/assadeiras-vidro.jpg",
+    "price": 25100,
+    "source": "https://assets.tramontina.com.br/upload/tramon/imagens/FAR/61315394PDM001E.jpg"
+  },
+  "formas-bolo": {
+    "localImage": "/images/gifts/formas-bolo.jpg",
+    "price": 14300,
+    "source": "https://assets.tramontina.com.br/upload/tramon/imagens/CUT/20062024PDM001E.jpg"
+  },
+  "jogo-facas": {
+    "localImage": "/images/gifts/jogo-facas.jpg",
+    "price": 19300,
+    "source": "https://assets.tramontina.com.br/upload/tramon/imagens/CUT/23699060PDM001E.jpg"
+  },
+  "potes-hermeticos": {
+    "localImage": "/images/gifts/potes-hermeticos.jpg",
+    "price": 15700,
+    "source": "https://assets.tramontina.com.br/upload/tramon/imagens/FAR/61227560PDM001E.jpg"
+  },
+  "aparelho-jantar": {
+    "localImage": "/images/gifts/aparelho-jantar.jpg",
+    "price": 43700,
+    "source": "https://assets.tramontina.com.br/upload/tramon/imagens/DEL/96010287PDM001G.jpg"
+  },
+  "faqueiro": {
+    "localImage": "/images/gifts/faqueiro.jpg",
+    "price": 21900,
+    "source": "https://assets.tramontina.com.br/upload/tramon/imagens/CUT/23799071PDM001E.jpg"
+  },
+  "jogo-copos": {
+    "localImage": "/images/gifts/jogo-copos.jpg",
+    "price": 12900,
+    "source": "https://assets.tramontina.com.br/upload/tramon/imagens/FAR/61251075PDM001E.jpg"
+  },
+  "travessas": {
+    "localImage": "/images/gifts/travessas.jpg",
+    "price": 45125,
+    "source": "https://assets.tramontina.com.br/upload/tramon/imagens/FAR/64310150PDM001G.jpg"
+  },
+  "air-fryer": {
+    "localImage": "/images/gifts/air-fryer.jpg",
+    "price": 30990,
+    "source": "https://philco.vtexassets.com/arquivos/ids/266532/BFR38_01.jpg?v=638973323851100000"
+  },
+  "liquidificador-arno": {
+    "localImage": "/images/gifts/liquidificador-arno.jpg",
+    "price": 24999,
+    "source": "https://lojaarno.vteximg.com.br/arquivos/ids/182624/7895500767057_1.jpg?v=639082446827430000"
+  },
+  "cafeteira": {
+    "localImage": "/images/gifts/cafeteira.jpg",
+    "price": 9990,
+    "source": "https://philco.vteximg.com.br/arquivos/ids/203845/CP28__0000_CP28_02.jpg?v=638761761304270000"
+  },
+  "sanduicheira": {
+    "localImage": "/images/gifts/sanduicheira.jpg",
+    "price": 18990,
+    "source": "https://philco.vteximg.com.br/arquivos/ids/272335/BGR16_04.jpg?v=638993409565900000"
+  },
+  "torradeira-electrolux": {
+    "localImage": "/images/gifts/torradeira-electrolux.jpg",
+    "price": 19990,
+    "source": "https://electrolux.vteximg.com.br/arquivos/ids/212403/Toaster_ETS25_Perspective_Electrolux_1000x1000_principal.jpg?v=638872565857530000"
+  },
+  "mixer-philips": {
+    "localImage": "/images/gifts/mixer-philips.jpg",
+    "price": 20990,
+    "source": "https://m.media-amazon.com/images/I/51Xr8Zqcs8L._AC_SL1500_.jpg"
+  },
+  "processador-mondial": {
+    "localImage": "/images/gifts/processador-mondial.png",
+    "price": 51990,
+    "source": "https://lojamondial.vteximg.com.br/arquivos/ids/160464/MPN-01-BF---Foto-01.png?v=638363676148500000"
+  },
+  "chaleira-britania": {
+    "localImage": "/images/gifts/chaleira-britania.jpg",
+    "price": 14990,
+    "source": "https://philco.vteximg.com.br/arquivos/ids/248656/BCH25_02.jpg?v=638742977091670000"
+  },
+  "panificadora-britania": {
+    "localImage": "/images/gifts/panificadora-britania.jpg",
+    "price": 79990,
+    "source": "https://philco.vteximg.com.br/arquivos/ids/158050/Multi-pane.jpg?v=638761848165170000"
+  },
+  "jogo-cama-king": {
+    "error": "HTTP 403",
+    "price": 29750,
+    "source": "https://d1l2khdhnk6ii8.cloudfront.net/Custom/Content/Products/98/52/985250_jogo-de-cama-alexandre-herchcovitch-queen-percal-180-fios-100-algodao_s500_638348805077724102.webp"
+  },
+  "edredom-king": {
+    "localImage": "/images/gifts/edredom-king.jpg",
+    "price": 24990,
+    "source": "https://americanas.vteximg.com.br/arquivos/ids/14077969/7367460441_1_xlarge.jpg?v=638754470455530000"
+  },
+  "cobertores-king": {
+    "localImage": "/images/gifts/cobertores-king.jpg",
+    "price": 19990,
+    "source": "https://americanas.vteximg.com.br/arquivos/ids/14077969/7367460441_1_xlarge.jpg?v=638754470455530000"
+  },
+  "travesseiros": {
+    "localImage": "/images/gifts/travesseiros.jpg",
+    "price": 7091,
+    "source": "https://americanas.vteximg.com.br/arquivos/ids/14710016/1520129027_1_xlarge.jpg?v=638754533949670000"
+  },
+  "almofadas": {
+    "localImage": "/images/gifts/almofadas.jpg",
+    "price": 1899,
+    "source": "https://americanas.vteximg.com.br/arquivos/ids/409792/2568380190_1_xlarge.jpg?v=638750817991830000"
+  },
+  "protetor-colchao": {
+    "localImage": "/images/gifts/protetor-colchao.jpg",
+    "price": 12990,
+    "source": "https://americanas.vteximg.com.br/arquivos/ids/14710016/1520129027_1_xlarge.jpg?v=638754533949670000"
+  },
+  "geladeira-brastemp": {
+    "localImage": "/images/gifts/geladeira-brastemp.jpg",
+    "price": 599900,
+    "source": "https://brastemp.vteximg.com.br/arquivos/ids/281325/01_Brastemp_Geladeira_BRO85MB_Imagem_Fr.jpg?v=639096303588500000"
+  },
+  "fogao-cooktop": {
+    "localImage": "/images/gifts/fogao-cooktop.jpg",
+    "price": 68900,
+    "source": "https://electrolux.vteximg.com.br/arquivos/ids/275852/7909569484654_1-1000x1000.jpg.jpg?v=638851563816870000"
+  },
+  "maquina-lavar": {
+    "localImage": "/images/gifts/maquina-lavar.jpg",
+    "price": 209900,
+    "source": "https://electrolux.vteximg.com.br/arquivos/ids/266993/lavadora-compacta-com-dispenser-autolimpante-e-cesto-inox-Detalhe2.jpg?v=638729965613800000"
+  },
+  "microondas-brastemp": {
+    "localImage": "/images/gifts/microondas-brastemp.jpg",
+    "price": 75900,
+    "source": "https://brastemp.vteximg.com.br/arquivos/ids/266168/01_Brastemp_Micro_ondas_BMS46AB_Imagem_Frontal.jpg?v=638974471582070000"
+  },
+  "lava-seca-electrolux": {
+    "localImage": "/images/gifts/lava-seca-electrolux.jpg",
+    "price": 419900,
+    "source": "https://electrolux.vteximg.com.br/arquivos/ids/289466/7909569485637_1-1000x1000.jpg?v=639060023230270000"
+  },
+  "forno-britania": {
+    "localImage": "/images/gifts/forno-britania.jpg",
+    "price": 39990,
+    "source": "https://philco.vteximg.com.br/arquivos/ids/273623/FORNO-ELETRICO-BFE55P-v0-17.jpg?v=638999"
+  },
+  "purificador-electrolux": {
+    "localImage": "/images/gifts/purificador-electrolux.jpg",
+    "price": 49990,
+    "source": "https://electrolux.vteximg.com.br/arquivos/ids/213777/PE11B.jpg?v=637716834258400000"
+  },
+  "smart-tv": {
+    "localImage": "/images/gifts/smart-tv.jpg",
+    "price": 299900,
+    "source": "https://americanas.vteximg.com.br/arquivos/ids/590838/3069509649_1SZ.jpg?v=638750845098870000"
+  },
+  "sofa": {
+    "localImage": "/images/gifts/sofa.png",
+    "price": 169900,
+    "source": "https://tokstok.vteximg.com.br/arquivos/ids/32279792/3-lugares-muy-marrom-mescla.jpg?v=638751677454430000"
+  },
+  "colchao": {
+    "localImage": "/images/gifts/colchao.jpg",
+    "price": 272999,
+    "source": "https://americanas.vteximg.com.br/arquivos/ids/10682719/5307702736_1_xlarge.jpg?v=638754090400300000"
+  },
+  "guarda-roupa": {
+    "localImage": "/images/gifts/guarda-roupa.jpg",
+    "price": 99998,
+    "source": "https://americanas.vteximg.com.br/arquivos/ids/21670663/7493701000_1_xlarge.jpg?v=638755167539800000"
+  },
+  "rack": {
+    "localImage": "/images/gifts/rack.jpg",
+    "price": 62498,
+    "source": "https://americanas.vteximg.com.br/arquivos/ids/7808305/7507478451_1_xlarge.jpg?v=638751785395100000"
+  },
+  "mesa-jantar": {
+    "localImage": "/images/gifts/mesa-jantar.jpg",
+    "price": 103527,
+    "source": "https://americanas.vteximg.com.br/arquivos/ids/6749810/7481897750_1_xlarge.jpg?v=638751677454430000"
+  }
+}

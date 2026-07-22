@@ -1,0 +1,38 @@
+{
+  "potes-hermeticos": {
+    "error": "no image: "
+  },
+  "faqueiro": {
+    "error": "no image: "
+  },
+  "jogo-copos": {
+    "error": "no image: "
+  },
+  "chaleira-britania": {
+    "error": "no image: "
+  },
+  "sanduicheira-amz": {
+    "error": "no image: Amazon.com.br"
+  },
+  "processador-mondial": {
+    "error": "no image: Amazon.com.br"
+  },
+  "mixer-philips": {
+    "price": 20990,
+    "file": "mixer-philips.jpg",
+    "title": "Mixer Daily RI2622, Branco, 110v, Philips Walita | Amazon.com.br",
+    "src": "https://m.media-amazon.com/images/I/51Xr8Zqcs8L._AC_SX569_.jpg"
+  },
+  "torradeira-electrolux": {
+    "price": 18790,
+    "file": "torradeira-electrolux.jpg",
+    "title": "Torradeira tostador Electrolux 7 niveis de tostagem função descongelar reaquecer cancelar bandeja co",
+    "src": "https://m.media-amazon.com/images/I/51pcpIXaj0L._AC_SX569_.jpg"
+  },
+  "jogo-cama-king": {
+    "price": 29750,
+    "file": "jogo-cama-king.jpg",
+    "title": "Jogo de Cama Alexandre Herchcovitch Queen - Percal 180 Fios 100% Algodão - Alexandre Herchcovitch",
+    "src": "https://d1l2khdhnk6ii8.cloudfront.net/Custom/Content/Products/98/52/985250_jogo-de-cama-alexandre-herchcovitch-queen-percal-180-fios-100-algodao_s90_638348805077724102.webp"
+  }
+}

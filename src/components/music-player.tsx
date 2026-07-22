@@ -80,7 +80,7 @@ export function MusicPlayer() {
   }
 
   return (
-    <div className="fixed bottom-5 right-5 z-50">
+    <div className="fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-4 z-40 sm:right-5">
       <audio
         ref={audioRef}
         src="/theme.mp3"
