@@ -21,13 +21,13 @@ export const wedding = {
   },
   about: {
     eyebrow: "Nossa história",
-    title: "Um capítulo escrito a quatro mãos",
     body: [
-      "O que começou em conversas simples virou o melhor lugar do mundo: um no outro. Com o tempo, o riso e o cuidado do dia a dia se tornaram a certeza de que queríamos caminhar juntos.",
-      "Acreditamos que foi Jesus quem uniu nossos caminhos e continua sendo o centro da nossa história. É Nele que firmamos este compromisso de amar, servir e crescer lado a lado.",
-      "No dia 13 de dezembro de 2026, às 15h, celebramos esse sim cercados de quem amamos. Sua presença é o nosso maior presente.",
+      "Tudo começou em novembro de 2023. Nosso primeiro encontro foi num cinema ao ar livre, num parque, à noite. Tinha aquele ar de filme americano. Eu já sabia que aquela noite seria especial.",
+      "Depois veio o Natal. Conheci a família dela inteira. Estávamos os dois sem jeito, nervosos. Mesmo assim, nunca vou esquecer aquela noite. Ela estava tão linda.",
+      "No terceiro encontro, dei a ela uma Bíblia de estudo. Dali em diante, tudo mudou. Em 22 de março de 2024, pedi que fosse minha namorada.",
+      "Por fim, em 18 de abril de 2026, em Piracaia, no interior de São Paulo, depois de um dia incrível, ajoelhei e pedi a mão dela em casamento. Eu a amo mais do que a mim mesmo.",
     ],
-    signature: "Com amor,",
+    signature: "Rafael",
   },
   heroImages: [
     {
@@ -44,6 +44,11 @@ export const wedding = {
     },
   ],
   aboutImages: [
+    {
+      src: "/images/about/proposal-firepit.jpg",
+      alt: "Rafael e Sara depois do pedido de casamento",
+      caption: "O sim",
+    },
     {
       src: "/images/about/pre-wedding-forehead-kiss.jpg",
       alt: "Rafael e Sara no ensaio pré-wedding",

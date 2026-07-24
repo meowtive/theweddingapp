@@ -20,40 +20,27 @@ export function About() {
     <section id="sobre" className="bg-paper px-6 py-24 md:py-32">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <BlurFade inView className="order-2 lg:order-1">
-          <div className="relative bg-cream px-8 py-12 md:px-12 md:py-16">
-            <div className="mb-10 flex items-start justify-between gap-4">
-              <svg
-                viewBox="0 0 64 64"
-                className="h-12 w-12 text-accent-soft"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.2"
-                aria-hidden
-              >
-                <path d="M32 52c-8-6-20-16-20-28a12 12 0 0 1 22-6 12 12 0 0 1 22 6c0 12-12 22-20 28Z" />
-                <path d="M20 22c4 2 8 2 12 0M32 22c4 2 8 2 12 0" />
-              </svg>
-              <p className="text-right text-xs tracking-[0.18em] uppercase text-muted">
-                {wedding.names}
-                <br />
-                ( 2026 )
-              </p>
-            </div>
-
-            <p className="mb-4 text-[11px] tracking-[0.3em] uppercase text-muted">
+          <div className="mx-auto max-w-lg lg:mx-0">
+            <p className="mb-8 text-[11px] tracking-[0.3em] uppercase text-muted">
               {wedding.about.eyebrow}
             </p>
-            <h2 className="font-serif text-3xl leading-snug text-ink md:text-4xl">
-              {wedding.about.title}
-            </h2>
-            <div className="mt-8 space-y-5 text-sm leading-relaxed text-muted md:text-base">
-              {wedding.about.body.map((paragraph) => (
-                <p key={paragraph.slice(0, 24)}>{paragraph}</p>
-              ))}
+
+            <div className="relative">
+              <div
+                aria-hidden
+                className="absolute -inset-x-3 -inset-y-2 rotate-[-1.5deg] bg-sand/60 shadow-sm"
+              />
+              <article className="letter-paper relative rotate-[0.8deg] px-8 py-10 shadow-[0_18px_50px_-28px_rgba(58,42,32,0.45)] md:px-11 md:py-12">
+                <div className="space-y-4 font-serif text-[1.2rem] leading-relaxed text-ink/90 md:text-[1.3rem]">
+                  {wedding.about.body.map((paragraph) => (
+                    <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+                  ))}
+                </div>
+                <p className="mt-8 text-right font-script text-4xl text-ink md:text-5xl">
+                  {wedding.about.signature}
+                </p>
+              </article>
             </div>
-            <p className="mt-10 font-script text-3xl text-accent-soft">
-              {wedding.about.signature} {wedding.names}
-            </p>
           </div>
         </BlurFade>
 
