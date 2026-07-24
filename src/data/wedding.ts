@@ -5,8 +5,8 @@ export const wedding = {
   tagline:
     "Diante da vastidão do tempo e da imensidão do universo, é um imenso prazer para mim dividir um planeta e uma época com você",
   dateLabel: "13. 12. 2026.",
-  /** Local noon — countdown target */
-  dateISO: "2026-12-13T12:00:00-03:00",
+  /** Ceremony at 15h — countdown target */
+  dateISO: "2026-12-13T15:00:00-03:00",
   venue: {
     name: "Star Eventos",
     street: "Rua Mario Maruca, SN",
@@ -23,9 +23,9 @@ export const wedding = {
     eyebrow: "Nossa história",
     title: "Um capítulo escrito a quatro mãos",
     body: [
-      "O que começou com conversas leves virou certeza. Entre risadas, viagens e o cotidiano, escolhemos construir uma vida juntos — com carinho, paciência e muito amor.",
-      "Acreditamos que foi Jesus quem uniu nossos caminhos e continua sendo o centro da nossa história. É Nele que firmamos este compromisso de caminhar lado a lado.",
-      "No dia 13 de dezembro de 2026, celebramos esse sim cercados das pessoas que fazem parte da nossa história. Sua presença é o nosso maior presente.",
+      "O que começou em conversas simples virou o melhor lugar do mundo: um no outro. Com o tempo, o riso e o cuidado do dia a dia se tornaram a certeza de que queríamos caminhar juntos.",
+      "Acreditamos que foi Jesus quem uniu nossos caminhos e continua sendo o centro da nossa história. É Nele que firmamos este compromisso de amar, servir e crescer lado a lado.",
+      "No dia 13 de dezembro de 2026, às 15h, celebramos esse sim cercados de quem amamos. Sua presença é o nosso maior presente.",
     ],
     signature: "Com amor,",
   },
@@ -79,8 +79,8 @@ export const wedding = {
   ],
   pix: {
     /** Exact key to copy into bank apps */
-    key: "11941601956",
-    typeLabel: "Telefone",
-    displayLabel: "(11) 94160-1956",
+    key: "35679201895",
+    typeLabel: "CPF",
+    displayLabel: "356.792.018-95",
   },
 } as const;

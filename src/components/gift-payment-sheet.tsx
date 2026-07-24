@@ -132,8 +132,8 @@ export function GiftPaymentSheet({
                 {formatBRL(gift.priceInCents)}
               </p>
               <p className="mt-2 text-sm leading-relaxed text-muted">
-                Pague este valor via PIX para o telefone abaixo. É rápido e chega
-                direto para nós.
+                Pague este valor via PIX para a chave CPF abaixo. É rápido e
+                chega direto para nós.
               </p>
 
               <div className="mt-6 rounded-2xl border border-line bg-cream/80 p-4 sm:p-5">
@@ -167,7 +167,7 @@ export function GiftPaymentSheet({
                 <li className="flex gap-3">
                   <span className="font-serif text-accent">2.</span>
                   <span>
-                    Cole a chave (telefone) e confira o valor{" "}
+                    Cole a chave (CPF) e confira o valor{" "}
                     <span className="text-ink">
                       {formatBRL(gift.priceInCents)}
                     </span>

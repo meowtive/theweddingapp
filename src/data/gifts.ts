@@ -178,18 +178,22 @@ export const gifts: Gift[] = [
   },
   {
     id: "formas-bolo",
-    name: "Formas para bolo",
-    description: "Kit de formas antiaderentes para bolos e sobremesas.",
-    priceInCents: 14300,
+    name: "Conjunto de formas 7 peças",
+    description: "Benditolar / Arary — formas polidas para bolo, pizza, pão e assados.",
+    priceInCents: 12990,
     image: "/images/gifts/formas-bolo.jpg",
+    productUrl:
+      "https://www.mercadolivre.com.br/conjunto-de-formas-polidas-benditolar-7-pecas-cor-polido/p/MLB53012283",
     presented: false,
   },
   {
     id: "jogo-facas",
     name: "Jogo de facas",
-    description: "Kit de facas Tramontina para o dia a dia.",
-    priceInCents: 19300,
+    description: "Tramontina Plenus off-white — aço inox, 8 peças.",
+    priceInCents: 11495,
     image: "/images/gifts/jogo-facas.jpg",
+    productUrl:
+      "https://www.tramontina.com.br/jogo-de-facas-tramontina-plenus-com-laminas-em-aco-inox-e-cabos-de-polipropileno-off-white-8-pecas/23498332.html",
     presented: false,
   },
   {
@@ -263,14 +267,6 @@ export const gifts: Gift[] = [
     presented: false,
   },
   {
-    id: "cafeteira",
-    name: "Cafeteira",
-    description: "Cafeteira Britânia CP15 — café fresquinho no dia a dia.",
-    priceInCents: 10990,
-    image: "/images/gifts/cafeteira.jpg",
-    presented: false,
-  },
-  {
     id: "sanduicheira",
     name: "Sanduicheira",
     description: "Britânia BGR16 Redstone — cores claras.",
@@ -332,8 +328,9 @@ export const gifts: Gift[] = [
   },
   {
     id: "jogo-cama-king",
-    name: "Jogo de cama king",
-    description: "Jogo de cama percal — conforto para o quarto.",
+    name: "Jogo de cama",
+    description:
+      "Zelo Alexandre Herchcovitch — Queen, percal 180 fios, 100% algodão.",
     priceInCents: 29750,
     image: "/images/gifts/jogo-cama-king.jpg",
     productUrl:
@@ -411,9 +408,11 @@ export const gifts: Gift[] = [
   {
     id: "microondas-brastemp",
     name: "Micro-ondas",
-    description: "Brastemp 32L branco com menu gourmet (BMS46AB).",
-    priceInCents: 75900,
+    description: "Brastemp 32L cinza espelhado com menu gourmet (BMS46AR).",
+    priceInCents: 87327,
     image: "/images/gifts/microondas-brastemp.jpg",
+    productUrl:
+      "https://www.brastemp.com.br/micro-ondas-brastemp-32-litros-cor-cinza-espelhado-com-menu-gourmet-bms46ar/p?idsku=326030627",
     presented: false,
   },
   {
@@ -456,10 +455,12 @@ export const gifts: Gift[] = [
   },
   {
     id: "sofa",
-    name: "Sofá",
-    description: "Sofá 3 lugares — referência Tok&Stok.",
-    priceInCents: 169900,
+    name: "Sofá-cama Fasano",
+    description: "Casa Box — sofá-cama retrátil com molas ensacadas (à vista).",
+    priceInCents: 307402,
     image: "/images/gifts/sofa.jpg",
+    productUrl:
+      "https://www.casabox.com.br/moveis/sala-de-estar/sofas-cama/sofa-cama-fasano-sem-caixa-molas-ensacadas?parceiro=4446&variant_id=17410",
     presented: false,
   },
   {
@@ -472,10 +473,12 @@ export const gifts: Gift[] = [
   },
   {
     id: "guarda-roupa",
-    name: "Guarda-roupa",
-    description: "Guarda-roupa casal 3 portas.",
-    priceInCents: 133331,
+    name: "Guarda-roupa Isabela",
+    description: "Casas Bahia — casal com espelho, 3 portas de correr.",
+    priceInCents: 234001,
     image: "/images/gifts/guarda-roupa.jpg",
+    productUrl:
+      "https://www.casasbahia.com.br/guarda-roupa-casal-com-espelho-3-portas-de-correr-isabela/p/12839733",
     presented: false,
   },
   {
