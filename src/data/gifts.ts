@@ -147,25 +147,31 @@ export const gifts: Gift[] = [
   {
     id: "jogo-panelas-ceramica",
     name: "Jogo de panelas cerâmica",
-    description: "Jogo 6 peças com revestimento cerâmico — cores claras.",
+    description: "Brinox Ceramic Life Sirius Vanilla — 6 peças, cores claras.",
     priceInCents: 58812,
     image: "/images/gifts/jogo-panelas-ceramica.jpg",
+    productUrl:
+      "https://www.mercadolivre.com.br/jogo-de-panelas-6-pecas-ceramic-life-sirius-vanilla-brinox-b/up/MLBU3461023192",
     presented: false,
   },
   {
     id: "frigideiras",
     name: "Frigideiras (pequena e grande)",
-    description: "Kit Tramontina Paris — 2 frigideiras antiaderentes.",
+    description: "Tramontina Veronese Linho — conjunto 2 peças.",
     priceInCents: 8999,
     image: "/images/gifts/frigideiras.jpg",
+    productUrl:
+      "https://www.magazineluiza.com.br/conjunto-de-frigideiras-tramontina-veronese-linho-2-pecas/p/241222900/ud/udfg/",
     presented: false,
   },
   {
     id: "panela-pressao",
     name: "Panela de pressão",
-    description: "Panela de pressão 4,5L antiaderente.",
+    description: "Brinox Ceramic Pressure Vanilla — 6,8L indução.",
     priceInCents: 17999,
     image: "/images/gifts/panela-pressao.jpg",
+    productUrl:
+      "https://www.mercadolivre.com.br/panela-pressao-brinox-4952103-ceramic-pressure-inducao-68l-vanilla/p/MLB22931744",
     presented: false,
   },
   {
@@ -398,14 +404,6 @@ export const gifts: Gift[] = [
     presented: false,
   },
   {
-    id: "maquina-lavar",
-    name: "Máquina de lavar",
-    description: "Electrolux 12kg com cesto inox (LAC12).",
-    priceInCents: 209900,
-    image: "/images/gifts/maquina-lavar.jpg",
-    presented: false,
-  },
-  {
     id: "microondas-brastemp",
     name: "Micro-ondas",
     description: "Brastemp 32L cinza espelhado com menu gourmet (BMS46AR).",
@@ -487,14 +485,6 @@ export const gifts: Gift[] = [
     description: "Rack para TV até 65\" — ~180 cm.",
     priceInCents: 57776,
     image: "/images/gifts/rack.jpg",
-    presented: false,
-  },
-  {
-    id: "mesa-jantar",
-    name: "Mesa de jantar",
-    description: "Mesa de jantar 6 lugares em madeira.",
-    priceInCents: 166664,
-    image: "/images/gifts/mesa-jantar.jpg",
     presented: false,
   },
 ];

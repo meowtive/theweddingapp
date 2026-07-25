@@ -21,13 +21,32 @@ export const wedding = {
   },
   about: {
     eyebrow: "Nossa história",
-    body: [
-      "Tudo começou em novembro de 2023. Nosso primeiro encontro foi num cinema ao ar livre, num parque, à noite. Tinha aquele ar de filme americano. Eu já sabia que aquela noite seria especial.",
-      "Depois veio o Natal. Conheci a família dela inteira. Estávamos os dois sem jeito, nervosos. Mesmo assim, nunca vou esquecer aquela noite. Ela estava tão linda.",
-      "No terceiro encontro, dei a ela uma Bíblia de estudo. Dali em diante, tudo mudou. Em 22 de março de 2024, pedi que fosse minha namorada.",
-      "Por fim, em 18 de abril de 2026, em Piracaia, no interior de São Paulo, depois de um dia incrível, ajoelhei e pedi a mão dela em casamento. Eu a amo mais do que a mim mesmo.",
+    letters: [
+      {
+        author: "Rafael",
+        signature: "Rafael",
+        photoSrc: "/images/about/proposal-firepit.jpg",
+        body: [
+          "Tudo começou em novembro de 2023. Nosso primeiro encontro foi num cinema ao ar livre, num parque, à noite. Tinha aquele ar de filme americano. Eu já sabia que aquela noite seria especial.",
+          "Depois veio o Natal. Conheci a família dela inteira. Estávamos os dois sem jeito, nervosos. Mesmo assim, nunca vou esquecer aquela noite. Ela estava tão linda.",
+          "No terceiro encontro, dei a ela uma Bíblia de estudo. Dali em diante, tudo mudou. Em 22 de março de 2024, pedi que fosse minha namorada.",
+          "Por fim, em 18 de abril de 2026, em Piracaia, no interior de São Paulo, depois de um dia incrível, ajoelhei e pedi a mão dela em casamento. Eu a amo mais do que a mim mesmo.",
+        ],
+      },
+      {
+        author: "Sara",
+        signature: "Sara",
+        photoSrc: "/images/about/pre-wedding-forehead-kiss.jpg",
+        body: [
+          "Sempre fui uma romântica incurável. Cresci assistindo a filmes e séries e sonhando que um dia viveria uma história de amor daquelas que aquecem o coração. Nunca namorei, porque sempre esperei pela pessoa certa. “Será só um.” E, no tempo perfeito de Deus, Jesus me presenteou com o Rafael.",
+          "Ele é muito melhor do que qualquer imagem que eu pudesse ter criado do homem perfeito. Com ele, descobri que o amor verdadeiro é leve, seguro e cheio da presença de Deus. Nossa história é, e sempre será, o meu romance favorito.",
+          "Tudo começou quando um amigo muito especial, que hoje temos a alegria de chamar de padrinho, nos apresentou. Desde aquele dia, minha vida mudou completamente. Hoje, sinceramente, nem consigo imaginar como era o mundo sem o Rafael.",
+          "Vivemos nosso primeiro Natal juntos, e foi mágico. Passamos horas acordados conversando sobre a vida, compartilhando sonhos, rindo e nos conhecendo. Tudo aconteceu de forma tão leve e natural que, sem perceber, ele conquistou meu coração.",
+          "Então chegou o dia 18 de abril, um dos dias mais inesquecíveis da minha vida. Foi quando ele me pediu em casamento, e naquele momento tive ainda mais certeza de que Deus escreveu cada detalhe da nossa história.",
+          "Agora conto os dias para o nosso “sim”. Tenho a alegria de dividir a vida com o homem que sempre pedi em minhas orações. Sem dúvida alguma, o Rafael é o amor da minha vida, e eu o amo com todo o meu coração.",
+        ],
+      },
     ],
-    signature: "Rafael",
   },
   heroImages: [
     {
