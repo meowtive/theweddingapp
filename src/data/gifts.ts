@@ -263,18 +263,7 @@ export const gifts: Gift[] = [
     presented: false,
   },
   {
-    id: "liquidificador-arno",
-    name: "Liquidificador",
-    description: "Arno Power Max 2200 marfim LN64 — cores claras.",
-    priceInCents: 24999,
-    image: "/images/gifts/liquidificador-arno.jpg",
-    productUrl:
-      "https://www.magazineluiza.com.br/liquidificador-arno-power-max-2200-marfim-ln64/p/241081900/ep/liqu/",
-    presented: false,
-  },
-  {
-    id: "sanduicheira",
-    name: "Sanduicheira",
+    id: "sanduicheira",    name: "Sanduicheira",
     description: "Britânia BGR16 Redstone — cores claras.",
     priceInCents: 18990,
     image: "/images/gifts/sanduicheira.jpg",
@@ -293,18 +282,7 @@ export const gifts: Gift[] = [
     presented: false,
   },
   {
-    id: "mixer-philips",
-    name: "Mixer",
-    description: "Philips Walita RI2622 branco — cores claras.",
-    priceInCents: 20990,
-    image: "/images/gifts/mixer-philips.jpg",
-    productUrl:
-      "https://www.amazon.com.br/Mixer-Philips-RI2622-32-branco/dp/B0873XXMXZ",
-    presented: false,
-  },
-  {
-    id: "processador-mondial",
-    name: "Processador de alimentos",
+    id: "processador-mondial",    name: "Processador de alimentos",
     description: "Mondial Multiprocessador Turbo 1000W branco.",
     priceInCents: 34990,
     image: "/images/gifts/processador-mondial.jpg",
