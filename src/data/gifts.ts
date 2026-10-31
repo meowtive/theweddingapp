@@ -402,16 +402,6 @@ export const gifts: Gift[] = [
     presented: false,
   },
   {
-    id: "forno-britania",
-    name: "Forno elétrico",
-    description: "Britânia BFE55P 52L — dupla resistência.",
-    priceInCents: 39990,
-    image: "/images/gifts/forno-britania.jpg",
-    productUrl:
-      "https://www.mercadolivre.com.br/forno-eletrico-britnia-52l-dupla-resistncia-bfe55p/p/MLB29117695",
-    presented: false,
-  },
-  {
     id: "purificador-electrolux",
     name: "Purificador de água",
     description: "Electrolux PE11B — painel touch, branco.",
