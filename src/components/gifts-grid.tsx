@@ -7,12 +7,39 @@ import { BlurFade } from "@/components/ui/blur-fade";
 
 export function GiftsGrid() {
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const frameRef = useRef(0);
 
   function scrollByCard(direction: -1 | 1) {
     const el = scrollerRef.current;
     if (!el) return;
+    cancelAnimationFrame(frameRef.current);
+
     const amount = Math.min(el.clientWidth * 0.85, 320);
-    el.scrollBy({ left: direction * amount, behavior: "smooth" });
+    const max = Math.max(0, el.scrollWidth - el.clientWidth);
+    const target = Math.min(max, Math.max(0, el.scrollLeft + direction * amount));
+    const start = el.scrollLeft;
+    const pageY = window.scrollY;
+
+    if (
+      Math.abs(target - start) < 1 ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      el.scrollLeft = target;
+      return;
+    }
+
+    // Animate scrollLeft directly. scrollBy({ behavior: "smooth" }) on this
+    // snap scroller also resets the document scroll position in WebKit.
+    const duration = 380;
+    const t0 = performance.now();
+    const frame = (now: number) => {
+      const progress = Math.min(1, (now - t0) / duration);
+      const ease = 1 - (1 - progress) ** 3;
+      el.scrollLeft = start + (target - start) * ease;
+      if (Math.abs(window.scrollY - pageY) > 1) window.scrollTo(0, pageY);
+      if (progress < 1) frameRef.current = requestAnimationFrame(frame);
+    };
+    frameRef.current = requestAnimationFrame(frame);
   }
 
   return (
@@ -35,6 +62,7 @@ export function GiftsGrid() {
           <button
             type="button"
             aria-label="Presentes anteriores"
+            onMouseDown={(event) => event.preventDefault()}
             onClick={() => scrollByCard(-1)}
             className="absolute left-2 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center border border-line bg-paper/95 text-xl text-accent backdrop-blur transition hover:bg-sand md:flex lg:left-0 lg:-translate-x-1/2"
           >
@@ -43,6 +71,7 @@ export function GiftsGrid() {
           <button
             type="button"
             aria-label="Próximos presentes"
+            onMouseDown={(event) => event.preventDefault()}
             onClick={() => scrollByCard(1)}
             className="absolute right-2 top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center border border-line bg-paper/95 text-xl text-accent backdrop-blur transition hover:bg-sand md:flex lg:right-0 lg:translate-x-1/2"
           >
@@ -51,7 +80,7 @@ export function GiftsGrid() {
 
           <div
             ref={scrollerRef}
-            className="flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth px-6 pb-2 md:gap-4 md:px-10 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex snap-x snap-mandatory gap-3 overflow-x-auto overflow-y-hidden overscroll-x-contain px-6 pb-2 md:gap-4 md:px-10 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {gifts.map((gift) => (
               <GiftCard key={gift.id} gift={gift} compact />
