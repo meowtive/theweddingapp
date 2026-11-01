@@ -19,7 +19,7 @@ export function GiftCard({
     <>
       <article
         className={cn(
-          "group flex shrink-0 snap-center flex-col overflow-hidden bg-paper",
+          "group flex shrink-0 flex-col overflow-hidden bg-paper md:[scroll-snap-align:none_center]",
           compact
             ? "w-[70vw] max-w-[260px] md:w-[280px] md:max-w-[280px]"
             : "w-full",

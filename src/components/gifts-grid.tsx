@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gifts } from "@/data/gifts";
 import { GiftCard } from "@/components/gift-card";
 import { BlurFade } from "@/components/ui/blur-fade";
@@ -8,6 +8,137 @@ import { BlurFade } from "@/components/ui/blur-fade";
 export function GiftsGrid() {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const frameRef = useRef(0);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+
+    let startX = 0;
+    let startY = 0;
+    let startLeft = 0;
+    let pageY = 0;
+    let lastX = 0;
+    let lastTime = 0;
+    let velocity = 0;
+    let horizontal: boolean | null = null;
+    let pinning = false;
+    let touching = false;
+    let momentum = 0;
+    let releasePin = 0;
+    let restoreFrame = 0;
+
+    const holdPage = (y: number) => {
+      if (Math.abs(window.scrollY - y) <= 1) return;
+      const root = document.documentElement;
+      const previous = root.style.scrollBehavior;
+      root.style.scrollBehavior = "auto";
+      window.scrollTo(0, y);
+      root.style.scrollBehavior = previous;
+    };
+
+    const keepPage = () => {
+      const y = pageY;
+      holdPage(y);
+      cancelAnimationFrame(restoreFrame);
+      restoreFrame = requestAnimationFrame(() => {
+        holdPage(y);
+        restoreFrame = requestAnimationFrame(() => holdPage(y));
+      });
+    };
+
+    const onTouchStart = (event: TouchEvent) => {
+      if (event.touches.length !== 1) return;
+      cancelAnimationFrame(frameRef.current);
+      cancelAnimationFrame(momentum);
+      window.clearTimeout(releasePin);
+      const touch = event.touches[0];
+      startX = lastX = touch.clientX;
+      startY = touch.clientY;
+      startLeft = el.scrollLeft;
+      pageY = window.scrollY;
+      lastTime = performance.now();
+      velocity = 0;
+      horizontal = null;
+      pinning = false;
+      touching = true;
+    };
+
+    const onTouchMove = (event: TouchEvent) => {
+      if (event.touches.length !== 1) return;
+      const touch = event.touches[0];
+      const dx = touch.clientX - startX;
+      const dy = touch.clientY - startY;
+      if (horizontal === null) {
+        if (Math.hypot(dx, dy) < 8) return;
+        horizontal = Math.abs(dx) > Math.abs(dy);
+        if (!horizontal) return;
+        pinning = true;
+        pageY = window.scrollY;
+        startLeft = el.scrollLeft;
+      }
+      if (!horizontal) return;
+      if (event.cancelable) event.preventDefault();
+      const now = performance.now();
+      const dt = now - lastTime;
+      if (dt > 0) {
+        const nextVelocity = (touch.clientX - lastX) / dt;
+        velocity = Math.max(-2.2, Math.min(2.2, nextVelocity));
+      }
+      lastX = touch.clientX;
+      lastTime = now;
+      el.scrollLeft = startLeft - dx;
+      keepPage();
+    };
+
+    const release = () => {
+      releasePin = window.setTimeout(() => {
+        pinning = false;
+        touching = false;
+      }, 500);
+    };
+
+    const onTouchEnd = () => {
+      if (!horizontal) {
+        release();
+        return;
+      }
+      let speed = -velocity * 18;
+      const tick = () => {
+        speed *= 0.92;
+        if (Math.abs(speed) < 0.5) {
+          release();
+          return;
+        }
+        el.scrollLeft += speed;
+        keepPage();
+        momentum = requestAnimationFrame(tick);
+      };
+      momentum = requestAnimationFrame(tick);
+    };
+
+    const onWindowScroll = () => {
+      if (pinning || (touching && pageY > 240 && window.scrollY < 40)) {
+        keepPage();
+      }
+    };
+
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("touchmove", onTouchMove, { passive: false });
+    el.addEventListener("touchend", onTouchEnd);
+    el.addEventListener("touchcancel", onTouchEnd);
+    window.addEventListener("scroll", onWindowScroll, { passive: true });
+
+    return () => {
+      cancelAnimationFrame(momentum);
+      cancelAnimationFrame(restoreFrame);
+      window.clearTimeout(releasePin);
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchmove", onTouchMove);
+      el.removeEventListener("touchend", onTouchEnd);
+      el.removeEventListener("touchcancel", onTouchEnd);
+      window.removeEventListener("scroll", onWindowScroll);
+    };
+  }, []);
 
   function scrollByCard(direction: -1 | 1) {
     const el = scrollerRef.current;
@@ -78,13 +209,15 @@ export function GiftsGrid() {
             ›
           </button>
 
-          <div
-            ref={scrollerRef}
-            className="flex snap-x snap-mandatory gap-3 overflow-x-auto overflow-y-hidden overscroll-x-contain px-6 pb-2 md:gap-4 md:px-10 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-          >
-            {gifts.map((gift) => (
-              <GiftCard key={gift.id} gift={gift} compact />
-            ))}
+          <div className="overflow-hidden">
+            <div
+              ref={scrollerRef}
+              className="flex touch-pan-y gap-3 overflow-x-auto overflow-y-hidden overscroll-x-none px-6 pb-2 [overflow-anchor:none] md:snap-x md:snap-mandatory md:touch-auto md:gap-4 md:overscroll-x-contain md:px-10 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              {gifts.map((gift) => (
+                <GiftCard key={gift.id} gift={gift} compact />
+              ))}
+            </div>
           </div>
         </div>
 
