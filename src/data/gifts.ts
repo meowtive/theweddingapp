@@ -71,15 +71,6 @@ export const gifts: Gift[] = [
     presented: false,
   },
   {
-    id: "cajon-del-maipo",
-    name: "Passeio no Cajón del Maipo",
-    description: "Cordilheira, ar puro e paisagem de tirar o fôlego.",
-    priceInCents: 32000,
-    image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80",
-    presented: false,
-  },
-  {
     id: "san-cristobal",
     name: "Teleférico San Cristóbal",
     description: "Vista panorâmica de Santiago do Cerro San Cristóbal.",
@@ -382,16 +373,6 @@ export const gifts: Gift[] = [
     presented: false,
   },
   {
-    id: "microondas-brastemp",
-    name: "Micro-ondas",
-    description: "Brastemp 32L cinza espelhado com menu gourmet (BMS46AR).",
-    priceInCents: 87327,
-    image: "/images/gifts/microondas-brastemp.jpg",
-    productUrl:
-      "https://www.brastemp.com.br/micro-ondas-brastemp-32-litros-cor-cinza-espelhado-com-menu-gourmet-bms46ar/p?idsku=326030627",
-    presented: false,
-  },
-  {
     id: "lava-seca-electrolux",
     name: "Lava e seca",
     description: "Electrolux LSC12 12kg Inverter cinza ônix.",
@@ -399,16 +380,6 @@ export const gifts: Gift[] = [
     image: "/images/gifts/lava-seca-electrolux.jpg",
     productUrl:
       "https://www.magazineluiza.com.br/lava-e-seca-electrolux-12kg-lsc12-inverter-agua-fria-e-quente-cinza-onix/p/241187000/ed/ela1/",
-    presented: false,
-  },
-  {
-    id: "purificador-electrolux",
-    name: "Purificador de água",
-    description: "Electrolux PE11B — painel touch, branco.",
-    priceInCents: 49990,
-    image: "/images/gifts/purificador-electrolux.jpg",
-    productUrl:
-      "https://www.casasbahia.com.br/purificador-de-agua-electrolux-pe11b-com-painel-touch-bivolt-branco/p/11688765",
     presented: false,
   },
   {
